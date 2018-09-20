@@ -1,10 +1,29 @@
 <?php
 /**
  * Template Name: Page - Style Guide
+ https://foundation.zurb.com/sites/docs/kitchen-sink.html
  */
 get_header(); ?>
 
 <?php while (have_posts()): the_post(); ?>
+    <section class="grid-container">
+        <div class="small-12 cell">
+            <h2 class="rm-m-top">Foundation X Y Grid Demo</h2>
+        </div>
+        <div class="grid-x">
+            <div class="cell callout primary">full width cell</div>
+            <div class="cell callout alert">full width cell</div>
+        </div>
+        <div class="grid-x">
+            <div class="cell small-6 callout secondary">6 cells</div>
+            <div class="cell small-6 callout success">6 cells</div>
+        </div>
+        <div class="grid-x">
+            <div class="cell medium-6 large-4 callout primary">12/6/4 cells</div>
+            <div class="cell medium-6 large-8 callout alert">12/6/8 cells</div>
+        </div>
+    </section>
+    <hr>
     <section id="typography" class="page-section">
         <div class="row">
             <div class="small-12 medium-4 large-3 columns">
@@ -169,12 +188,24 @@ get_header(); ?>
             <div class="columns small-12 medium-8 large-9">
                 <div class="row">
                     <div class="medium-6">
-                        <p><a href="#" class="btn btn-default">.btn.btn-default</a></p>
-                        <p><a href="#" class="btn btn-primary">.btn.btn-primary</a></p>
-                        <p><a href="#" class="btn btn-success">.btn.btn-success</a></p>
-                        <p><a href="#" class="btn btn-warning">.btn.btn-warning</a></p>
-                        <p><a href="#" class="btn btn-danger">.btn.btn-danger</a></p>
-                        <p><a href="#" class="btn btn-link">.btn.btn-link</a></p>
+                       <!-- Anchors (links) -->
+                        <a href="#0" class="button">Learn More</a>
+                        <a href="#features" class="button">View All Features</a>
+
+                        <!-- Buttons (actions) -->
+                        <button type="button" class="success button">Save</button>
+                        <button type="button" class="alert button">Delete</button>
+
+                        <a class="tiny button" href="#0">So Tiny</a>
+                        <a class="small button" href="#0">So Small</a>
+                        <a class="large button" href="#0">So Large</a>
+                        <a class="expanded button" href="#0">Such Expand</a>
+
+                        <div class="button-group">
+                        <a class="button">One</a>
+                        <a class="button">Two</a>
+                        <a class="button">Three</a>
+                        </div>
                     </div>
 
                     <div class="medium-6">
@@ -201,7 +232,7 @@ get_header(); ?>
                 <div class="row">
                     <div class="medium-6">
                         <div class="btn-group btn-group-lg" role="group">
-                            <button type="button" class="btn btn-default">Left</button>
+                            <button type="button" class="button btn btn-default">Left</button>
                             <button type="button" class="btn btn-default">Middle</button>
                             <button type="button" class="btn btn-default">Right</button>
                         </div>
